@@ -2,36 +2,40 @@
 using namespace std;
 class data
 {
-    int id;
+    char id[100];
     string name;
     int phoneno;
     string address;
+    char password[100];
 
     public:
     data() //Default constructor
     {
-        cout <<"Default constructor called." <<endl;
+        cout <<" ..ONLINE REGISTRATION SIGN UP.." <<endl; //Default constructor called.
     }
     void input()
     {
-        cout<<"Enter your ID number --> " <<endl;
-        cin >> id;
+        cout<<"Enter your email --> ";
+        cin.getline(id,100);
+
+        cout<<"Enter your password --> ";
+        cin.getline(password,100);
+
         
-        cin.ignore();
-        cout<<"Enter your name --> "<<endl;
+        cout<<"Enter your name --> ";
         getline(cin,name);
 
-        cout <<"Enter your phone number --> " <<endl;
+        cout <<"Enter your phone number --> " ;
         cin >> phoneno;
 
         cin.ignore();
-        cout <<"Enter your address --> " <<endl;
+        cout <<"Enter your address --> ";
         cin >> address;
 
     }
     void show()
     {
-        cout <<"Welcome !!!" << name <<". Thankyou for your time. Your registration has been added to our list." <<endl;
+        cout <<"\n Welcome !!! " << name <<". Thankyou for your time. You are logged in!!!." <<endl;
     }
 };
 int main()
